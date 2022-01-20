@@ -1,0 +1,4 @@
+com\example\JerseyCRUD\Dao\UserDao.class
+com\example\JerseyCRUD\Service\UserService.class
+com\example\JerseyCRUD\Model\User.class
+com\example\JerseyCRUD\MyResource.class
