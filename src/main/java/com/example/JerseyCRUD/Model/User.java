@@ -6,6 +6,7 @@ public class User {
 	private String Name;
 	private String City;
 	private int Age;
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -30,6 +31,7 @@ public class User {
 	public void setAge(int age) {
 		Age = age;
 	}
+	
 	public User(int userId, String name, String city, int age) {
 		super();
 		this.userId = userId;
@@ -37,6 +39,7 @@ public class User {
 		City = city;
 		Age = age;
 	}
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub

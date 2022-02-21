@@ -19,13 +19,22 @@ import com.example.JerseyCRUD.Service.UserService;
 @Path("rest")
 public class MyResource {
 	
+	//public UserService userService = new UserService();
+	
 //	  @GET
 //	  @Produces(MediaType.TEXT_PLAIN) 
 //	  public String getIt() { 
 //		  return "Hello World";
 //	  }
 	 
-    
+	@POST
+    @Path("/addUser")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addUser(User user){
+    	return UserService.getInstance().addUser(user);
+    }
+	
     @GET
     @Path("/allUsers")
     @Produces(MediaType.APPLICATION_JSON)
@@ -39,15 +48,6 @@ public class MyResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUserById(@PathParam("userId") int userId){
     	return UserService.getInstance().getUserById(userId);
-    }
-    
-    
-    @POST
-    @Path("/addUser")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response addUser(User user){
-    	return UserService.getInstance().addUser(user);
     }
     
     @DELETE

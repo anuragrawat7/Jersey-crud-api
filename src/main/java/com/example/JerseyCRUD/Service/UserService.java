@@ -20,17 +20,18 @@ public class UserService {
 	}
 
 	public Response addUser(User user) {
-		
+		System.out.println("111");
 		user.setUserId(user.getUserId());
 		user.setName(user.getName());
 		user.setCity(user.getCity());
 		user.setAge(user.getAge());
 			
 		if (!UserDao.save(user)) {
+			System.out.println("222");
 			System.out.println("Error in adding a user. ");
 			return Response.status(Status.BAD_REQUEST).build();
 		}
-		
+		System.out.println("333");
 		return Response.status(Status.CREATED).entity(user).build();
 	}
 
